@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kigo
 Summary:	kigo
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	a56e4e12d993c204e5f17de72657dd52
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	96d2f9e9deedaf574d0e083e496cabca
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
@@ -67,8 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/kigo-games.knsrc
-/etc/xdg/kigo.knsrc
 %attr(755,root,root) %{_bindir}/kigo
 %{_desktopdir}/org.kde.kigo.desktop
 %{_datadir}/config.kcfg/kigo.kcfg
@@ -81,3 +79,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kigo
 %{_datadir}/kxmlgui5/kigo
 %{_datadir}/metainfo/org.kde.kigo.appdata.xml
+%{_datadir}/knsrcfiles/kigo-games.knsrc
+%{_datadir}/knsrcfiles/kigo.knsrc
+%{_datadir}/qlogging-categories5/kigo.categories
