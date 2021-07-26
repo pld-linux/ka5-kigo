@@ -43,6 +43,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Kigo is an open-source implementation of the popular Go game.
 
+%description -l pl.UTF-8
+Kigo jest otwartoźródłową implementacją popularnej gry Go.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
